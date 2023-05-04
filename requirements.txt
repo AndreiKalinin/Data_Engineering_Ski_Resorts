@@ -1,0 +1,7 @@
+requests
+pandas
+prefect
+psycopg2-binary
+dash
+dash-bootstrap-components
+plotly

@@ -1,0 +1,58 @@
+
+version: 2
+
+sources:
+    - name: ski_resorts_data
+      database: ski_resorts
+      schema: stg
+
+      tables:
+        - name: resorts_data
+        - name: snow_cover
+
+models:
+  - name: resorts_dash
+    description: "Resorts data for the dashboard"
+    columns:
+      - name: id
+        description: "Unique identifier for each resort"
+        tests:
+          - unique
+          - not_null
+      - name: resort
+        description: "Name of the ski & snowboard resort"
+      - name: country
+        description: "Country in which the resort is located"
+      - name: continent
+        description: "Continent in which the resort is located"
+      - name: highest_point
+        description: "Highest mountain point at the resort (meters)"
+      - name: lowest_point
+        description: "Lowest possible point to ski at the resort (meters)"
+      - name: beginner_slopes
+        description: "Total length of 'children', 'blue', and 'green' slopes at the resort (km)"
+      - name: intermediate_slopes
+        description: "Total length of 'red' slopes at the resort (km)"
+      - name: difficult_slopes
+        description: "Total length of 'black', 'advanced', and 'expert' slopes at the resort (km)"
+      - name: longest_run
+        description: "Longest possible continuous run at the ski resort (km)"
+
+  - name: snow_dash
+    description: "Resorts data for the dashboard"
+    columns:
+      - name: id
+        description: "Unique identifier for each resort"
+        tests:
+          - unique
+          - not_null
+      - name: resort
+        description: "Name of the ski & snowboard resort"
+      - name: country
+        description: "Country in which the resort is located"
+      - name: continent
+        description: "Continent in which the resort is located"
+      - name: month
+        description: "Date to represent the month of the year (not just the first day)"
+      - name: snow
+        description: "Percent of time the region was covered in snow during the month"

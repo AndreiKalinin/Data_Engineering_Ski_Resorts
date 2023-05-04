@@ -1,0 +1,31 @@
+/* input box */
+.Select-control {
+    background-color: white;
+    height: 40px;
+    color: black;
+}
+
+.Select input{
+    color: black;
+}
+
+/* changes the text color of input box */
+.Select-value-label {
+    color: black !important;
+    font-size: 18px;
+}
+
+/* dropdown menu options */
+.VirtualizedSelectOption {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+ }
+
+.Select--multi .Select-value {
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+
+
